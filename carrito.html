@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+img {
+     width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: flex-end;
+  }
+    footer {
+           text-align: center;
+           padding: 20px;
+           background-color:#f7ddc2;;
+           color: black;
+           margin-top: 20px;}
+
+      
+       h1{ text-align: center;}
+       nav{
+       overflow:hidden;  }
+     nav a{
+       float:right;
+       display:black;
+       color:green;
+       text-align:center;
+       padding:14px 7px;
+       text-decoration:none; }
+       table {
+         width: 100% ;
+         margin: 30px auto;
+       }
+       body { background-color: #f7ddc2;}
+       .products {
+   display: flex;
+   gap: 20px;
+}
+body { 	background-image: url('https://img.freepik.com/fotos-premium/fondo-muebles-modernos_469760-19702.jpg');
+			background-size: cover; /* Ajusta el tamaño de la imagen */
+			background-repeat: no-repeat; /* Evita la repetición de la imagen */
+			background-attachment: fixed; /* Fija la imagen en la posición */
+			margin: 0; /* Elimina el margen */
+			padding: 0; /* Elimina el relleno */}
+      h2{color:#fff; margin: 100px;}
+.product {
+   border: 1px solid #ccc;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+button {
+   background-color: #9da384;
+   color: white;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   border-radius: 5px;
+}
+p{color: #fff;}
+
+
+  header {
+
+  
+padding: 1em;
+text-align: center;
+}
+
+header nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: space-between;
+}
+
+header nav ul li {
+margin-right: 20px;
+}
+
+header nav a {
+color: #fff;
+text-decoration: none;
+font-family: monotype corsiva ;
+}
+
+/* Media queries para dispositivos móviles */
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+    }
+  }
+</style>
+<script>
+ let cart = [];
+let total = 0;
+
+function addToCart(product, price) {
+   cart.push({ product, price });
+   total += price;
+   updateCart();
+}
+
+function updateCart() {
+   const cartElement = document.getElementById('cart');
+   const totalElement = document.getElementById('total');
+   
+   cartElement.innerHTML = '';
+   cart.forEach(item => {
+       const li = document.createElement('li');
+       li.textContent = `${item.product} - $${item.price.toFixed(2)}`;
+       cartElement.appendChild(li);
+   });
+   
+   totalElement.textContent = total.toFixed(2);
+}
+
+
+</script>
+<script>
+
+</script>
+<body>
+  <!--contenido de la pagina-->
+      <header> <nav> <ul> <li><a href="inicio.html"> Inicio </a></li>
+  
+          <li><a href="articulos.html"> Articulos</a></li>
+          <li><a href="carrito.html"> Carrito </a></li>
+      <li><a href="contactos.html"> Contactos </a></li> </ul></nav> </header>
+ <img src="mueble1.jpg" alt="">
+    <p>Precio: $1,566</p>
+      <button onclick="addToCart('Producto 1', 1566)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble2.jpg" alt="">
+    <p>Precio: $1,700</p>
+      <button onclick="addToCart('Producto 2', 1700)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble3.jpg" alt="">
+    <p>Precio: $2,400</p>
+      <button onclick="addToCart('Producto 3', 2400 )" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble4.jpg" alt="">
+    <p>Precio: $2,100</p>
+      <button onclick="addToCart('Producto 4', 2100)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble5.jpg" alt="">
+    <p>Precio: $1,300</p>
+      <button onclick="addToCart('Producto 5', 1300)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble6.jpg" alt="">
+    <p>Precio: $3,000</p>
+      <button onclick="addToCart('Producto 6', 3000)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble 7.jpg" alt="">
+    <p>Precio: $3,500</p>
+      <button onclick="addToCart('Producto 7', 3500)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble8.jpg" alt="">
+    <p>Precio: $2,900</p>
+      <button onclick="addToCart('Producto 8', 2900)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble9.jpg" alt="">
+    <p>Precio: $2,500</p>
+      <button onclick="addToCart('Producto 9', 2500)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble10.jpg" alt="">
+    <p>Precio: $4,000</p>
+      <button onclick="addToCart('Producto 10', 4000)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble11.jpg" alt="">
+    <p>Precio: $1,900</p>
+      <button onclick="addToCart('Producto 11', 1900)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+       <img src="mueble12.jpg" alt="">
+    <p>Precio: $2,100</p>
+      <button onclick="addToCart('Producto 12', 2100)" >  Agregar al Carrito</button>
+      <button onclick="alert('Producto Comprado')">Comprar</button>
+    <h2>Carrito</h2>
+    <ul id="cart"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+    <script src="script.js"></script>  
+</body>
+</html>
